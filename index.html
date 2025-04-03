@@ -1,11 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hexa Secure Labs</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
 </head>
+<style>
+  .vertical-slider {
+            width: 250px;
+            height: 100%; /* Adjust as needed */
+            overflow: visible;
+        }
+        .item {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            height: 60px;
+            padding: 16px 20px;
+            background-color: #fff;
+            color: #b4b4b4;
+            font-size: 18px;
+            border-radius: 999px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        .glow {
+            background-color: #cdff6a;
+            color: #000;
+            font-weight: bold;
+        }
+</style>
+
 <body>
+  <header>
+    <nav class="py-2 duration-300 fixed top-0 left-0 right-0 z-50 bg-white">
+      <div class="container">
+        <div class="flex items-center justify-between -mx-2">
+          <div class="px-2 order-0 lg:order-none">
+            <a href="" class="flex items-center">
+              <img src="./src/img/hsl-logo.svg" class="w-[100px]" alt="">
+            </a>
+          </div>
+          <div class="px-2 order-1 lg:order-none">
+            <div class="nav-main">
+              <button class="hamburger">
+                <span class=""></span>
+                <span class=""></span>
+                <span class=""></span>
+              </button>
+              <div class="nav-wrapper flex gap-4 md:gap-5 items-center md:justify-end">
+                <div class="md:hidden inline-block">
+                  <a href="" class="flex items-center">
+                    <img src="./src/img/hsl-logo.svg" class="w-[100px]" alt="">
+                  </a>
+                </div>
+                <div>
+                  <a class="nav-link" href="./index.html">Solutions</a>
+                </div>
+                <div>
+                  <a class="nav-link" href="./index.html">Services</a>
+                </div>
+
+                <div class="mt-auto lg:hidden inline-block">
+                  <a href=""
+                    class="button rounded-[40px] py-[12px] px-[24px] bg-black w-full lg:min-w-[160px] inline-block text-white text-[15px] leading-[1.5] font-semibold">
+                    <p class="text-center">Get Started</p>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="lg:inline-block hidden">
+            <a href=""
+              class="button rounded-[40px] py-[12px] px-[24px] bg-black w-full lg:min-w-[160px] inline-block text-white text-[15px] leading-[1.5] font-semibold">
+              <p class="text-center">Get Started</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="py-[80px] md:py-[100px] h-screen flex items-center">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-3 items-center">
+          <div>
+            <h1 class="text-24 md:text-[42px] font-bold mb-0">Advanced <br> Cybersecurity <span
+                class="text-primary text-shadow"> <br>For Financial Institutions</span></h1>
+            <p class="text-16 md:text-18 text-gray mt-4">Hexa Secure Labs provides cutting-edge SaaS security solutions
+              tailored for banks, fintech, and financial service providers, ensuring compliance and protection against
+              evolving threats.</p>
+            <div class="mt-5 w-fit">
+              <a href=""
+                class="button rounded-[40px] py-[12px] px-[24px] bg-black w-full lg:min-w-[160px] inline-block text-white text-[15px] leading-[1.5] font-semibold">
+                <p class="text-center">Get Started</p>
+              </a>
+            </div>
+            <div class="flex flex-wrap gap-4 items-center mt-5">
+              <div>
+                <p class="text-primarydark text-24 md:text-[28px] font-bold mb-0">99.99%</p>
+                <p class="text-gray uppercase text-16 mt-1 mb-0">Uptime</p>
+              </div>
+              <div>
+                <p class="text-primarydark text-24 md:text-[28px] font-bold mb-0">250+</p>
+                <p class="text-gray uppercase text-16 mt-1 mb-0">Financial Clients</p>
+              </div>
+              <div>
+                <p class="text-primarydark text-24 md:text-[28px] font-bold mb-0">24/7</p>
+                <p class="text-gray uppercase text-16 mt-1 mb-0">Threat Monitoring</p>
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <div class="vertical-slider mx-auto">
+              <div class="my-slider">
+                  <div class="item">Accounting Partners</div>
+                  <div class="item">Fund Admin</div>
+                  <div class="item">Fractional CFOs</div>
+                  <div class="item">Law Firms</div>
+                  <div class="item">Banking Partners</div>
+                  <div class="item">Accounting Partners</div>
+                  <div class="item">Fund Admin</div>
+                  <div class="item">Fractional CFOs</div>
+                  <div class="item">Law Firms</div>
+                  <div class="item">Accounting Partners</div>
+                  <div class="item">Fund Admin</div>
+                  <div class="item">Fractional CFOs</div>
+                  <div class="item">Law Firms</div>
+                  <div class="item">Banking Partners</div>
+                  <div class="item">Accounting Partners</div>
+                  <div class="item">Fund Admin</div>
+                  <div class="item">Fractional CFOs</div>
+                  <div class="item">Law Firms</div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var slider = tns({
+            container: '.my-slider',
+            items: 10, // Number of visible items
+            slideBy: 1,
+            axis: "vertical",
+            autoplay: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: false,
+            speed: 1000,
+            autoplayTimeout: 2000,
+            loop: true,
+        });
     
+        function highlightMiddleItem() {
+            let info = slider.getInfo();
+            let slideItems = Array.from(info.slideItems); // Convert to an array
+    
+            // Remove glow from all items
+            slideItems.forEach(item => item.classList.remove("glow"));
+    
+            // Find the middle visible item
+            let firstVisibleIndex = info.index;
+            let middleIndex = firstVisibleIndex + Math.floor(info.items / 2);
+    
+            if (slideItems[middleIndex]) {
+                slideItems[middleIndex].classList.add("glow");
+            }
+        }
+    
+        slider.events.on("indexChanged", highlightMiddleItem);
+        highlightMiddleItem(); // Initial call
+    });
+    </script>
+    
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./src/app.js"></script>
 </body>
+
 </html>
