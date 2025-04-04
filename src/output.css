@@ -602,10 +602,6 @@ video {
   top: 0px;
 }
 
-.top-\[20\%\] {
-  top: 20%;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -624,36 +620,24 @@ video {
   margin-right: auto;
 }
 
-.mt-4 {
-  margin-top: 32px;
-}
-
-.mt-auto {
-  margin-top: auto;
-}
-
 .mb-0 {
   margin-bottom: 0px;
-}
-
-.mt-5 {
-  margin-top: 48px;
-}
-
-.mt-3 {
-  margin-top: 24px;
 }
 
 .mt-1 {
   margin-top: 8px;
 }
 
-.ml-auto {
-  margin-left: auto;
+.mt-4 {
+  margin-top: 32px;
 }
 
-.ml-\[100px\] {
-  margin-left: 100px;
+.mt-5 {
+  margin-top: 48px;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .block {
@@ -684,21 +668,13 @@ video {
   width: 100px;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.w-\[\] {
-  width: ;
-}
-
-.w-\[80\%\] {
-  width: 80%;
+.w-full {
+  width: 100%;
 }
 
 .flex-shrink {
@@ -729,20 +705,8 @@ video {
   gap: 32px;
 }
 
-.gap-2 {
-  gap: 16px;
-}
-
-.gap-\[20px\] {
-  gap: 20px;
-}
-
 .rounded-\[40px\] {
   border-radius: 40px;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 
 .border {
@@ -800,14 +764,6 @@ video {
   font-size: 15px;
 }
 
-.text-20 {
-  font-size: 20px;
-}
-
-.text-18 {
-  font-size: 18px;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -830,7 +786,7 @@ video {
 
 .text-gray {
   --tw-text-opacity: 1;
-  color: rgb(98 98 98 / var(--tw-text-opacity));
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .text-primary {
@@ -838,14 +794,14 @@ video {
   color: rgb(157 232 9 / var(--tw-text-opacity));
 }
 
+.text-primarydark {
+  --tw-text-opacity: 1;
+  color: rgb(157 232 9 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-primarydark {
-  --tw-text-opacity: 1;
-  color: rgb(123 192 10 / var(--tw-text-opacity));
 }
 
 .transition {
@@ -1133,16 +1089,6 @@ body{
     gap: 48px;
   }
 
-  .md\:py-\[120px\] {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .md\:py-\[10px\] {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
   .md\:py-\[100px\] {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1152,16 +1098,12 @@ body{
     font-size: 18px;
   }
 
-  .md\:text-\[42px\] {
-    font-size: 42px;
-  }
-
   .md\:text-\[28px\] {
     font-size: 28px;
   }
 
-  .md\:text-\[\] {
-    color: ;
+  .md\:text-\[42px\] {
+    font-size: 42px;
   }
 }
 
