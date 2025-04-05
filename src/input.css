@@ -4,7 +4,7 @@
 
 :root {
   --primary: #9DE809;
-  --primary-dark: #7BC00A;
+  --primary-dark: #9DE809;
   --gray: #626262;
   --gray-light: #E5E5E5;
   --black: #000000;
@@ -257,3 +257,36 @@ body{
     .text-shadow{
       text-shadow: 0 0px 0.5px rgba(0,0,0,0.2);
     }
+
+
+    .solution-card{
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      padding: 40px 30px;
+      transition: all 0.3s ease;
+      border: 1px solid #E5E5E5;
+    }
+
+    .solution-card:hover{
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border-color: var(--primary);
+    }
+
+    .solution-icon{
+      width: 60px;
+      height: 60px;
+      background-color: rgba(157, 232, 9, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .solution-icon svg{
+      width: 30px;
+      height: 30px;
+      fill: var(--primary-dark);
+    }
+x
