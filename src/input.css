@@ -265,6 +265,7 @@ body{
       padding: 40px 30px;
       transition: all 0.3s ease;
       border: 1px solid #E5E5E5;
+      position: relative;
     }
 
     .solution-card:hover{
@@ -289,4 +290,108 @@ body{
       height: 30px;
       fill: var(--primary-dark);
     }
-x
+
+    .arrow-list li{
+      padding-left:35px;
+      font-size:16px;
+      position:relative;
+      margin-bottom:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-weight:500;
+      line-height:24px
+    }
+    
+    .arrow-list li:before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:2px;
+      background-image:url("./img/r-arrow.svg");
+      background-repeat:no-repeat;
+      width:24px;
+      height:24px
+    }
+    
+    .arrow-list li:last-child{
+      margin-bottom:0
+    }
+    
+    @media(max-width: 1024px){
+      .arrow-list li{
+        font-size:14px;
+        padding-left:24px;
+        align-items:flex-start
+      }
+    
+      .arrow-list li:before{
+        width:20px;
+        height:20px
+      }
+    
+      .arrow-list li a{
+        max-width:192px
+      }
+    
+      .arrow-list li span{
+        font-size:12px;
+        opacity:.8
+      }
+    }
+
+    .pricing-features {
+      margin-bottom: 32px;
+    }
+  
+    .pricing-feature {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .pricing-feature svg {
+        width: 20px;
+        /* height: 18px; */
+        fill: var(--primary);
+    }
+
+    .secure-section{
+      position: relative;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .secure-section::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
+      linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+      linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 100% 100%, 40px 40px, 40px 40px;
+      z-index: 1;
+    }
+      
+    /* .secure-gradient{
+      background: rgb(0,0,0);
+      background: linear-gradient(90deg, rgba(0,0,0,0.6685267857142857) 0%, rgba(0,0,0,0.6937368697478992) 24%, rgba(0,0,0,0.8421962535014006) 59%, rgba(0,0,0,0.671327906162465) 100%);
+      z-index: 1;
+    } */
+
+
+    .secure-card{
+      background: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(2px);
+    }
+
+    .secure-card--icon{
+      background-color: rgba(0, 0, 0, 0);
+      box-shadow: 0px 0px 9px 5px rgba(222, 247, 171, 0.23) inset;
+      opacity: 1;
+    }
