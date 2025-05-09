@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexa Secure Labs</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  </head>
+  <style>
+    .vertical-slider {
+      width: 280px;
+      height: 100%;
+      overflow: visible;
+      position: relative;
+    }
+
+    .vertical-slider::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 10%,
+        rgba(255, 255, 255, 0.275) 50%
+      );
+      z-index: 10;
+    }
+
+    .vertical-slider::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.2567620798319328) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      z-index: 10;
+    }
+
+    .sector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      height: 60px;
+      padding: 10px 24px;
+      background-color: #fafafa;
+      color: #b4b4b4;
+      font-size: 18px;
+      border-radius: 999px;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .glow {
+      background-color: #9de809;
+      color: #000;
+      font-weight: 550;
+    }
+  </style>
+
+  <body>
+    <header>
+      <nav class="py-2 duration-300 fixed top-0 left-0 right-0 z-50 bg-white">
+        <div class="container">
+          <div class="flex items-center justify-between -mx-2">
+            <div class="px-2 order-0 lg:order-none">
+              <a href="" class="flex items-center">
+                <img src="./src/img/hsl-logo.svg" class="w-[100px]" alt="" />
+              </a>
+            </div>
+            <div class="px-2 order-1 lg:order-none">
+              <div class="nav-main">
+                <button class="hamburger">
+                  <span class=""></span>
+                  <span class=""></span>
+                  <span class=""></span>
+                </button>
+                <div
+                  class="nav-wrapper flex gap-4 md:gap-5 items-center md:justify-end"
+                >
+                  <div class="md:hidden inline-block">
+                    <a href="" class="flex items-center">
+                      <img
+                        src="./src/img/hsl-logo.svg"
+                        class="w-[100px]"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a class="nav-link" href="./index.html">Solutions</a>
+                  </div>
+                  <div>
+                    <a class="nav-link" href="./index.html">Services</a>
+                  </div>
+
+                  <div class="mt-auto lg:hidden inline-block">
+                    <a
+                      href=""
+                      class="button rounded-[40px] py-[12px] px-[24px] bg-black w-full lg:min-w-[160px] inline-block text-white text-[15px] leading-[1.5] font-semibold"
+                    >
+                      <p class="text-center">Get Started</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:inline-block hidden">
+              <a
+                href=""
+                class="button rounded-[40px] py-[12px] px-[24px] bg-black w-full lg:min-w-[160px] inline-block text-white text-[15px] leading-[1.5] font-semibold"
+              >
+                <p class="text-center">Get Started</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="py-[80px] md:py-[100px] h-screen flex items-center">
+        <div class="container">
+          <div class="grid md:grid-cols-2 gap-3 items-center">
+            <div>
+              <h1 class="text-24 md:text-[42px] font-bold mb-0">
+                Clarus – Compliance That Learns With You
+              </h1>
+              <p class="text-16 md:text-18 text-gray mt-4">
+                From control matrices to PII scanning, Clarus automates the hard parts of governance and audit readiness.
+              </p>
+              <div class="mt-5 flex flex-row gap-2 w-fit">
+                <a
+                  href=""
+                  class="button rounded-lg py-[12px] px-[24px] bg-primary w-full lg:min-w-[160px] inline-block text-black text-[15px] leading-[1.5] font-semibold"
+                  style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px"
+                >
+                  <p class="text-center">Request Demo</p>
+                </a>
+               
+              </div>
+            </div>
+            <div>
+               
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-[90px] bg-gray/5">
+        <div class="container">
+          <h1 class="text-[26px] md:text-[36px] font-bold mb-0 text-center">
+            Core Features
+          </h1>
+          <!-- <p class="max-w-[590px] mx-auto text-center text-16 md:text-18 mt-2 text-gray">Our specialized cybersecurity
+          platform addresses the unique challenges faced by financial institutions in today's digital landscape.</p> -->
+          <div class="grid md:grid-cols-3 gap-3 mt-[60px]">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-18 mb-2 font-semibold">Control Matrix</h3>
+              <p class="text-16 text-gray">
+                Map ISO, SOC 2, RBI, DPDP controls with ease.
+              </p>
+              
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-18 mb-2 font-semibold">Risk Register</h3>
+                <p class="text-16 text-gray">
+                    Capture, categorize, and treat organizational risks.
+                </p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-18 mb-2 font-semibold">PII Exposure Monitor</h3>
+                <p class="text-16 text-gray">
+                    Get alerts from cloud buckets, emails, and SaaS tools.
+                </p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-18 mb-2 font-semibold">Helix AI</h3>
+                <p class="text-16 text-gray">
+                    Conversational compliance assistant that explains, suggests, and automates.
+                </p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-18 mb-2 font-semibold">Framework Mapper</h3>
+                <p class="text-16 text-gray">
+                    Map overlapping controls across regulations.
+                </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-[90px]">
+        <div class="container">
+            <div class="flex flex-col md:flex-row items-center gap-3">
+                <div class="md:w-[50%]">
+                    <div class="h-[4px] w-[120px] bg-primary rounded-full mb-3 md:mb-4"></div>
+                    <h1 class="text-[22px] md:text-[28px] font-bold mb-2">
+                        Control Matrix
+                    </h1>
+                    <p class="text-16 text-gray">Streamline your compliance management with our intelligent control matrix system. Map and manage multiple frameworks simultaneously while maintaining perfect alignment.</p>
+                    <button class="flex items-center gap-1 mt-3">
+                        Learn More
+                        <img src="./src/img/r-arrow.svg" class="w-[18px]" alt="" />
+                    </button>
+                </div>
+                <div class="md:w-[50%] flex items-center">
+                    <img class="w-[80%] rounded-2xl mx-auto" src="./src/img/dash-1.png" alt="">
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="py-[90px]">
+        <div class="container">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-3">
+                <div class="md:w-[50%]">
+                    <div class="h-[4px] w-[120px] bg-primary rounded-full mb-3 md:mb-4"></div>
+                    <h1 class="text-[22px] md:text-[28px] font-bold mb-2">
+                        Risk Register
+                    </h1>
+                    <p class="text-16 text-gray">Comprehensive risk management platform that helps you identify, assess, and mitigate risks effectively. Stay ahead of potential threats with our advanced analytics.</p>
+                    <button class="flex items-center gap-1 mt-3">
+                        Learn More
+                        <img src="./src/img/r-arrow.svg" class="w-[18px]" alt="" />
+                    </button>
+                </div>
+                <div class="md:w-[50%] flex items-center">
+                    <img class="w-[80%] rounded-2xl mx-auto" src="./src/img/dash-2.png" alt="">
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="py-[90px]">
+        <div class="container">
+            <div class="flex flex-col md:flex-row items-center gap-3">
+                <div class="md:w-[50%]">
+                    <div class="h-[4px] w-[120px] bg-primary rounded-full mb-3 md:mb-4"></div>
+                    <h1 class="text-[22px] md:text-[28px] font-bold mb-2">
+                        PII Exposure Monitor
+                    </h1>
+                    <p class="text-16 text-gray">Real-time monitoring and alerts for sensitive data exposure across your entire digital infrastructure. Protect your customers' data with advanced scanning capabilities.</p>
+                    <button class="flex items-center gap-1 mt-3">
+                        Learn More
+                        <img src="./src/img/r-arrow.svg" class="w-[18px]" alt="" />
+                    </button>
+                </div>
+                <div class="md:w-[50%] flex items-center">
+                    <img class="w-[80%] rounded-2xl mx-auto" src="./src/img/dash-3.png" alt="">
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="py-[90px] bg-gray/5">
+        <div class="container">
+            <div class="flex flex-col md:flex-row items-center gap-3">
+                <div class="md:w-[50%]">
+                    <div class="h-[4px] w-[120px] bg-primary rounded-full mb-3 md:mb-4"></div>
+                    <h1 class="text-[22px] md:text-[28px] font-bold mb-2">
+                        Helix AI Assistant
+                    </h1>
+                    <p class="text-16 text-gray mb-2">Meet Helix, your AI-powered compliance companion. Get instant answers, automate routine tasks, and receive smart suggestions for improving your compliance posture.</p>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li class="text-gray text-16 mb-[6px]">Natural language processing for compliance queries</li>
+                        <li class="text-gray text-16 mb-[6px]">Automated control mapping suggestions</li>
+                        <li class="text-gray text-16 mb-[6px]">Risk assessment automation</li>
+                        <li class="text-gray text-16 mb-[6px]">Compliance requirement explanations</li>
+                        <li class="text-gray text-16 mb-[6px]">Real-time regulatory updates</li>
+                    </ul>
+                </div>
+                <div class="md:w-[50%]">
+                    <div class="bg-white px-3 py-3 rounded-xl shadow-xl">
+                        <div class="flex items-center gap-2">
+                            <img src="./src/img/magic.svg" class="w-[18px]" alt="">
+                            <p class="text-16 md:text-18 text-black font-semibold">
+                                Helix AI
+                            </p>
+                        </div>
+                        <div class="p-2 bg-gray/5 rounded-lg mt-3">
+                            <p class="text-16 text-gray">
+                                How can I map ISO 27001 controls to SOC 2?
+                            </p>
+                        </div>
+                        <div class="p-2 bg-gray/5 rounded-lg mt-2">
+                            <p class="text-16 text-gray">
+                                What are the key GDPR requirements for data processing?
+                            </p>
+                        </div>
+                        <div class="p-2 bg-gray/5 rounded-lg mt-2">
+                            <p class="text-16 text-gray">
+                                Generate a risk assessment report for cloud storage
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="py-[90px]">
+        <div class="container">
+          <h1 class="text-[26px] md:text-[36px] font-bold mb-0 text-center">
+            Ready to Transform Your Compliance?
+          </h1>
+
+          <p class="max-w-[590px] mx-auto text-center text-16 md:text-18 mt-2 text-gray">Join leading organizations that trust Clarus to streamline their compliance and governance processes.</p>
+          <div class="flex items-center gap-4 mx-auto w-fit">
+            <button
+            class="button rounded-lg py-[12px] px-[24px] bg-[#86da00] mx-auto w-fit text-white text-[15px] leading-[1.5] font-semibold flex mt-3"
+            >
+                Schedule a Demo
+          </button>
+            <button class="flex items-center gap-1 mt-3">
+                Learn More
+                <img src="./src/img/r-arrow.svg" class="w-[18px]" alt="" />
+            </button>
+          </div>
+          
+        </div>
+      </section>
+     
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var slider = tns({
+          container: ".my-slider",
+          items: 10, // Number of visible items
+          slideBy: 1,
+          gutter: 5,
+          axis: "vertical",
+          autoplay: true,
+          autoplayButtonOutput: false,
+          controls: false,
+          nav: false,
+          speed: 1000,
+          autoplayTimeout: 2000,
+          loop: true,
+        });
+
+        function highlightMiddleItem() {
+          let info = slider.getInfo();
+          let slideItems = Array.from(info.slideItems); // Convert to an array
+
+          // Remove glow from all items
+          slideItems.forEach((item) =>
+            item.firstElementChild.classList.remove("glow")
+          );
+
+          // Find the middle visible item
+          let firstVisibleIndex = info.index;
+          let middleIndex = firstVisibleIndex + Math.floor(info.items / 2) - 1;
+
+          if (slideItems[middleIndex]) {
+            slideItems[middleIndex].firstElementChild.classList.add("glow");
+          }
+        }
+
+        slider.events.on("indexChanged", highlightMiddleItem);
+        highlightMiddleItem(); // Initial call
+      });
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./src/app.js"></script>
+  </body>
+</html>

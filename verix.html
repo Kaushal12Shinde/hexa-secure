@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexa Secure Labs</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  </head>
+  <style>
+    .vertical-slider {
+      width: 280px;
+      height: 100%;
+      overflow: visible;
+      position: relative;
+    }
+
+    .vertical-slider::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 10%,
+        rgba(255, 255, 255, 0.275) 50%
+      );
+      z-index: 10;
+    }
+
+    .vertical-slider::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.2567620798319328) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      z-index: 10;
+    }
+
+    .sector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      height: 60px;
+      padding: 10px 24px;
+      background-color: #fafafa;
+      color: #b4b4b4;
+      font-size: 18px;
+      border-radius: 999px;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .glow {
+      background-color: #9de809;
+      color: #000;
+      font-weight: 550;
+    }
+  </style>
+
+  <body>
+    <header>
+      <nav class="py-2 duration-300 fixed top-0 left-0 right-0 z-50 bg-white">
+        <div class="container">
+          <div class="flex items-center justify-between -mx-2">
+            <div class="px-2 order-0 lg:order-none">
+              <a href="" class="flex items-center">
+                <img src="./src/img/hsl-logo.svg" class="w-[100px]" alt="" />
+              </a>
+            </div>
+            <div class="px-2 order-1 lg:order-none">
+              <div class="nav-main">
+                <button class="hamburger">
+                  <span class=""></span>
+                  <span class=""></span>
+                  <span class=""></span>
+                </button>
+                <div
+                  class="nav-wrapper flex gap-4 md:gap-5 items-center md:justify-end"
+                >
+                  <div class="md:hidden inline-block">
+                    <a href="" class="flex items-center">
+                      <img
+                        src="./src/img/hsl-logo.svg"
+                        class="w-[100px]"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a class="nav-link" href="./index.html">Solutions</a>
+                  </div>
+                  <div>
+                    <a class="nav-link" href="./index.html">Services</a>
+                  </div>
+
+                  <div class="mt-auto lg:hidden inline-block">
+                    <a
+                      href=""
+                      class="button rounded-[40px] py-[12px] px-[24px] bg-black w-full lg:min-w-[160px] inline-block text-white text-[15px] leading-[1.5] font-semibold"
+                    >
+                      <p class="text-center">Get Started</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:inline-block hidden">
+              <a
+                href=""
+                class="button rounded-[40px] py-[12px] px-[24px] bg-black w-full lg:min-w-[160px] inline-block text-white text-[15px] leading-[1.5] font-semibold"
+              >
+                <p class="text-center">Get Started</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="py-[80px] md:py-[100px] h-screen flex items-center">
+        <div class="container">
+          <div class="grid md:grid-cols-2 gap-3 items-center">
+            <div>
+              <h1 class="text-24 md:text-[42px] font-bold mb-0">
+                Verix – Mobile Security for the Masses
+              </h1>
+              <p class="text-16 md:text-18 text-gray mt-4">
+                Indian users face real threats from predatory apps. Verix empowers users to take control.
+              </p>
+              <div class="mt-5 flex flex-row gap-2 w-fit">
+                <a
+                  href=""
+                  class="button rounded-lg py-[12px] px-[24px] bg-primary w-full lg:min-w-[160px] inline-block text-black text-[15px] leading-[1.5] font-semibold"
+                  style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px"
+                >
+                  <p class="text-center">Try Verix Beta</p>
+                </a>
+               
+              </div>
+            </div>
+            <div>
+               <img class="md:w-[80%] mx-auto" src="./src/img/verix-hero.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-[90px] bg-gray/5">
+        <div class="container">
+          <h1 class="text-[26px] md:text-[36px] font-bold mb-0 text-center">
+            Core Features
+          </h1>
+          <!-- <p class="max-w-[590px] mx-auto text-center text-16 md:text-18 mt-2 text-gray">Our specialized cybersecurity
+          platform addresses the unique challenges faced by financial institutions in today's digital landscape.</p> -->
+          <div class="grid md:grid-cols-3 gap-3 mt-[60px]">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-18 mb-2 font-semibold">Loan App Detector</h3>
+              <p class="text-16 text-gray">
+                Flag Chinese loan apps and predatory behavior
+              </p>
+              <p class="text-16 text-gray mt-2">
+                <span class="text-primary">&#9679;</span>&nbsp;&nbsp;Active Protection
+              </p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-18 mb-2 font-semibold">SIM Swap Alerts</h3>
+                <p class="text-16 text-gray">
+                    Real-time SIM change detection
+                </p>
+                <p class="text-16 text-gray mt-2">
+                  <span class="text-primary">&#9679;</span>&nbsp;&nbsp;24/7 Monitoring
+                </p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-18 mb-2 font-semibold">Secure Vault</h3>
+                <p class="text-16 text-gray">Encrypt and store your personal documents
+                </p>
+                <p class="text-16 text-gray mt-2">
+                  <span class="text-primary">&#9679;</span>&nbsp;&nbsp;End-to-End Encrypted
+                </p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-18 mb-2 font-semibold">Permission Manager</h3>
+                <p class="text-16 text-gray">View, audit, and control app permissions
+                </p>
+                <p class="text-16 text-gray mt-2">
+                  <span class="text-primary">&#9679;</span>&nbsp;&nbsp;Full Control
+                </p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-18 mb-2 font-semibold">Hexli Assistant</h3>
+                <p class="text-16 text-gray">On-device AI that explains risks and suggests action
+                </p>
+                <p class="text-16 text-gray mt-2">
+                  <span class="text-primary">&#9679;</span>&nbsp;&nbsp;AI Powered
+                </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-[90px]">
+        <div class="container">
+            <div class="grid md:grid-cols-3 gap-3 max-w-[990px] mx-auto">
+                <div>
+                    <h1 class="text-primary font-bold text-[24px] md:text-[28px] text-center">
+                        1M+
+                    </h1>
+                    <p class="text-16 text-gray text-center">
+                        Protected Users
+                    </p>
+                </div>
+                <div>
+                    <h1 class="text-primary font-bold text-[24px] md:text-[28px] text-center">
+                        50K+
+                    </h1>
+                    <p class="text-16 text-gray text-center">
+                        Threats Detected
+                    </p>
+                </div>
+                <div>
+                    <h1 class="text-primary font-bold text-[24px] md:text-[28px] text-center">
+                        100K+
+                    </h1>
+                    <p class="text-16 text-gray text-center">
+                        Apps Analyzed
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      <section class="py-[90px] bg-gray/5">
+        <div class="container">
+          <h1 class="text-[26px] md:text-[36px] font-bold mb-0 text-center">
+            Ready to Transform Your Compliance?
+          </h1>
+
+          <p class="max-w-[590px] mx-auto text-center text-16 md:text-18 mt-2 text-gray">Join leading organizations that trust Clarus to streamline their compliance and governance processes.</p>
+          <div class="flex items-center gap-4 mx-auto w-fit">
+            <button
+            class="button rounded-lg py-[12px] px-[24px] bg-[#86da00] mx-auto w-fit text-white text-[15px] leading-[1.5] font-semibold flex mt-3"
+            >
+            Try Verix Beta
+          </button>
+            <button class="flex items-center gap-1 mt-3">
+                Contact for Partnership
+                <img src="./src/img/r-arrow.svg" class="w-[18px]" alt="" />
+            </button>
+          </div>
+          
+        </div>
+      </section>
+     
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var slider = tns({
+          container: ".my-slider",
+          items: 10, // Number of visible items
+          slideBy: 1,
+          gutter: 5,
+          axis: "vertical",
+          autoplay: true,
+          autoplayButtonOutput: false,
+          controls: false,
+          nav: false,
+          speed: 1000,
+          autoplayTimeout: 2000,
+          loop: true,
+        });
+
+        function highlightMiddleItem() {
+          let info = slider.getInfo();
+          let slideItems = Array.from(info.slideItems); // Convert to an array
+
+          // Remove glow from all items
+          slideItems.forEach((item) =>
+            item.firstElementChild.classList.remove("glow")
+          );
+
+          // Find the middle visible item
+          let firstVisibleIndex = info.index;
+          let middleIndex = firstVisibleIndex + Math.floor(info.items / 2) - 1;
+
+          if (slideItems[middleIndex]) {
+            slideItems[middleIndex].firstElementChild.classList.add("glow");
+          }
+        }
+
+        slider.events.on("indexChanged", highlightMiddleItem);
+        highlightMiddleItem(); // Initial call
+      });
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
